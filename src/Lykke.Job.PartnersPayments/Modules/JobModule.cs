@@ -1,0 +1,103 @@
+﻿using Autofac;
+using Common;
+using JetBrains.Annotations;
+using Lykke.Job.PartnersPayments.Services;
+using Lykke.Job.PartnersPayments.Settings;
+using Lykke.Sdk;
+using Lykke.Sdk.Health;
+using Lykke.Service.CustomerProfile.Client;
+using Lykke.Service.PartnerManagement.Client;
+using Lykke.Service.PartnersPayments.Domain.Common;
+using Lykke.Service.PartnersPayments.Domain.RabbitMq.Handlers;
+using Lykke.Service.PartnersPayments.Domain.Services;
+using Lykke.Service.PartnersPayments.DomainServices;
+using Lykke.Service.PartnersPayments.DomainServices.Common;
+using Lykke.Service.PartnersPayments.DomainServices.RabbitMq.Handlers;
+using Lykke.Service.PrivateBlockchainFacade.Client;
+using Lykke.Service.WalletManagement.Client;
+using Lykke.SettingsReader;
+using Lykke.Service.EligibilityEngine.Client;
+
+namespace Lykke.Job.PartnersPayments.Modules
+{
+    [UsedImplicitly]
+    public class JobModule : Module
+    {
+        private readonly IReloadingManager<AppSettings> _appSettings;
+
+        public JobModule(IReloadingManager<AppSettings> appSettings)
+        {
+            _appSettings = appSettings;
+        }
+
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterWalletManagementClient(_appSettings.CurrentValue.WalletManagementService, null);
+            builder.RegisterCustomerProfileClient(_appSettings.CurrentValue.CustomerProfileService, null);
+            builder.RegisterPrivateBlockchainFacadeClient(_appSettings.CurrentValue.PrivateBlockchainFacadeService, null);
+            builder.RegisterPartnerManagementClient(_appSettings.CurrentValue.PartnerManagementServiceClient, null);
+            builder.RegisterEligibilityEngineClient(_appSettings.CurrentValue.EligibilityEngineServiceClient, null);
+
+            builder.RegisterType<PaymentsService>()
+                .As<IPaymentsService>()
+                .WithParameter("tokenSymbol",
+                    _appSettings.CurrentValue.PartnersPaymentsJob.Constants.TokenSymbol)
+                .SingleInstance();
+
+            builder.RegisterType<TransactionScopeHandler>()
+                .As<ITransactionScopeHandler>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<PaymentsStatusUpdater>()
+                .As<IPaymentsStatusUpdater>()
+                .WithParameter("tokenSymbol",
+                    _appSettings.CurrentValue.PartnersPaymentsJob.Constants.TokenSymbol)
+                .SingleInstance();
+
+            builder.RegisterType<BlockchainEncodingService>()
+                .As<IBlockchainEncodingService>()
+                .SingleInstance();
+
+            builder.RegisterType<BlockchainEventDecoder>()
+                .As<IBlockchainEventDecoder>()
+                .SingleInstance();
+
+            builder.RegisterType<SettingsService>()
+                .As<ISettingsService>()
+                .WithParameter("partnersPaymentsAddress",
+                    _appSettings.CurrentValue.PartnersPaymentsAddress)
+                .WithParameter("requestsExpirationPeriod",
+                    _appSettings.CurrentValue.RequestsExpirationPeriod)
+                .WithParameter("masterWalletAddress",
+                    _appSettings.CurrentValue.MasterWalletAddress)
+                .SingleInstance();
+
+            builder.RegisterType<UndecodedEventHandler>()
+                .As<IUndecodedEventHandler>()
+                .SingleInstance();
+
+            builder.RegisterType<TransactionFailedEventHandler>()
+                .As<ITransactionFailedEventHandler>()
+                .SingleInstance();
+
+            builder.RegisterType<HealthService>()
+                .As<IHealthService>()
+                .SingleInstance();
+
+            builder.RegisterType<StartupManager>()
+                .As<IStartupManager>()
+                .SingleInstance();
+
+            builder.RegisterType<ShutdownManager>()
+                .As<IShutdownManager>()
+                .SingleInstance();
+
+            builder.RegisterType<ExpiredRequestsManager>()
+                .WithParameter("idlePeriod", _appSettings.CurrentValue.PartnersPaymentsJob.IdlePeriod)
+                .WithParameter("paymentsExpirationPeriod", _appSettings.CurrentValue.PaymentsExpirationPeriod)
+                .As<IStartable>()
+                .As<IStopable>()
+                .SingleInstance();
+        }
+    }
+}

@@ -1,0 +1,71 @@
+PartnersPaymentsService:
+  Db:
+    LogsConnString:
+      settings-key: PartnersPaymentsService-LogsConnString
+      types:
+        - AzureTableStorage
+    DataConnString:
+      settings-key: PartnersPaymentsService-DataConnString
+  RabbitMq:
+    RabbitMqConnectionString:
+      settings-key: WalletManagementRabbitMQ
+      types:
+        - RabbitMq
+  Constants:
+    TokenSymbol:
+      settings-key: Constant-TokenSymbol
+PartnersPaymentsJob:
+  Db:
+    LogsConnString:
+      settings-key: PartnersPaymentsService-LogsConnString
+      types:
+        - AzureTableStorage
+    DataConnString:
+      settings-key: PartnersPaymentsService-DataConnString
+  RabbitMq:
+    RabbitMqConnectionString:
+      settings-key: WalletManagementRabbitMQ
+      types:
+        - RabbitMq
+  Constants:
+    TokenSymbol:
+      settings-key: Constant-TokenSymbol
+  IdlePeriod:
+    settings-key: PartnersPaymentsJob-IdlePeriod
+PaymentsExpirationPeriod:
+  settings-key: PartnersPayments-PaymentsExpirationPeriod
+RequestsExpirationPeriod:
+  settings-key: PartnersPayments-RequestsExpirationPeriod
+PartnersPaymentsAddress:
+  settings-key: PrivateBlockchain-PartnersPaymentsContractAddress
+MasterWalletAddress:
+  settings-key: PartnersPaymentsService-MasterWalletAddress
+PrivateBlockchainFacadeService:
+  ServiceUrl:
+    settings-key: PrivateBlockchainFacadeServiceUrl
+CustomerProfileService:
+  ServiceUrl:
+    settings-key: CustomerProfileServiceUrl
+WalletManagementService:
+  ServiceUrl:
+    settings-key: WalletManagementServiceUrl
+CurrencyConvertorService:
+  ServiceUrl:
+    settings-key: CurrencyConvertorServiceUrl
+PartnerManagementServiceClient:
+  ServiceUrl:
+    settings-key: PartnerManagementServiceUrl
+EligibilityEngineServiceClient:
+  ServiceUrl:
+    settings-key: EligibilityEngineServiceUrl
+SlackNotifications:
+  AzureQueue:
+    ConnectionString:
+      settings-key: SlackNotificationsConnString
+      types:
+        - AzureTableStorage
+    QueueName:
+      settings-key: SlackQueueName
+MonitoringServiceClient:
+  MonitoringServiceUrl:
+    settings-key: MonitoringServiceUrl

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.1</Version>
+    <Authors>Lykke</Authors>
+    <Company>Lykke</Company>
+    <Product>Lykke.Service.PartnersPayments</Product>
+    <Description>Client for Lykke.Service.PartnersPayments API</Description>
+    <PackageLicenseUrl>https://github.com/LykkeCity/Lykke.Service.PartnersPayments/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/LykkeCity/Lykke.Service.PartnersPayments</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/14153330?v=3&amp;s=200</PackageIconUrl>
+    <RepositoryUrl>https://github.com/LykkeCity/Lykke.Service.PartnersPayments.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Lykke</PackageTags>
+    <PackageId>Falcon.Service.PartnersPayments.Client</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Lykke.Service.PartnersPayments.Client.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Falcon.Numerics" Version="0.1.1" />
+    <PackageReference Include="Lykke.HttpClientGenerator" Version="2.5.0" />
+    <PackageReference Include="Lykke.SettingsReader" Version="5.2.0" />
+    <PackageReference Include="Refit" Version="4.6.107" />
+  </ItemGroup>
+</Project>
