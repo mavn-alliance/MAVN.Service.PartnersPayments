@@ -22,7 +22,7 @@ namespace MAVN.Service.PartnersPayments.MsSqlRepositories.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Lykke.Service.PartnersPayments.MsSqlRepositories.Entities.PartnerPaymentEntity", b =>
+            modelBuilder.Entity("MAVN.Service.PartnersPayments.MsSqlRepositories.Entities.PartnerPaymentEntity", b =>
                 {
                     b.Property<string>("PaymentRequestId")
                         .ValueGeneratedOnAdd()
@@ -85,7 +85,7 @@ namespace MAVN.Service.PartnersPayments.MsSqlRepositories.Migrations
                     b.ToTable("partners_payments");
                 });
 
-            modelBuilder.Entity("Lykke.Service.PartnersPayments.MsSqlRepositories.Entities.PaymentRequestBlockchainEntity", b =>
+            modelBuilder.Entity("MAVN.Service.PartnersPayments.MsSqlRepositories.Entities.PaymentRequestBlockchainEntity", b =>
                 {
                     b.Property<string>("PaymentRequestId")
                         .ValueGeneratedOnAdd()
