@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Falcon.Job.QuorumTransactionWatcher.Contract" Version="4.8.0" />
+    <PackageReference Include="Falcon.PrivateBlockchain.HospitalityRedeemGateway" Version="2.0.0" />
+    <PackageReference Include="Falcon.Service.CurrencyConvertor.Client" Version="4.0.0" />
+    <PackageReference Include="Falcon.Service.CustomerProfile.Client" Version="7.7.0" />
+    <PackageReference Include="Falcon.Service.EligibilityEngine.Client" Version="3.0.0" />
+    <PackageReference Include="Falcon.Service.PartnerManagement.Client" Version="3.0.0" />
+    <PackageReference Include="Falcon.Service.PrivateBlockchainFacade.Client" Version="2.9.0" />
+    <PackageReference Include="Falcon.Service.PrivateBlockchainFacade.Contract" Version="2.13.0" />
+    <PackageReference Include="Falcon.Service.WalletManagement.Client" Version="3.5.0" />
+    <PackageReference Include="Lykke.RabbitMqBroker" Version="7.13.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\contract\MAVN.Service.PartnersPayments.Contract\MAVN.Service.PartnersPayments.Contract.csproj" />
+    <ProjectReference Include="..\MAVN.Service.PartnersPayments.Domain\MAVN.Service.PartnersPayments.Domain.csproj" />
+  </ItemGroup>
+</Project>
