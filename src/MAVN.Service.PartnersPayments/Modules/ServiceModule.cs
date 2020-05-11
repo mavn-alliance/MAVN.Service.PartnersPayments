@@ -1,9 +1,9 @@
-using Autofac;
+﻿using Autofac;
 using JetBrains.Annotations;
 using Lykke.Sdk;
-using Lykke.Service.CustomerProfile.Client;
-using Lykke.Service.EligibilityEngine.Client;
-using Lykke.Service.PartnerManagement.Client;
+using MAVN.Service.CustomerProfile.Client;
+using MAVN.Service.EligibilityEngine.Client;
+using MAVN.Service.PartnerManagement.Client;
 using MAVN.Service.PartnersPayments.Domain.Common;
 using MAVN.Service.PartnersPayments.Domain.RabbitMq.Handlers;
 using MAVN.Service.PartnersPayments.Domain.Services;
@@ -12,8 +12,8 @@ using MAVN.Service.PartnersPayments.DomainServices.Common;
 using MAVN.Service.PartnersPayments.DomainServices.RabbitMq.Handlers;
 using MAVN.Service.PartnersPayments.Services;
 using MAVN.Service.PartnersPayments.Settings;
-using Lykke.Service.PrivateBlockchainFacade.Client;
-using Lykke.Service.WalletManagement.Client;
+using MAVN.Service.PrivateBlockchainFacade.Client;
+using MAVN.Service.WalletManagement.Client;
 using Lykke.SettingsReader;
 
 namespace MAVN.Service.PartnersPayments.Modules

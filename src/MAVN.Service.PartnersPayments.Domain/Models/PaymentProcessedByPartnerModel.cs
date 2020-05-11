@@ -1,4 +1,4 @@
-using Falcon.Numerics;
+using MAVN.Numerics;
 
 namespace MAVN.Service.PartnersPayments.Domain.Models
 {

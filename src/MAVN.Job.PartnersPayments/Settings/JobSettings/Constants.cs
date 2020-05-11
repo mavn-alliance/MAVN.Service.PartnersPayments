@@ -1,6 +1,6 @@
 using JetBrains.Annotations;
 
-namespace Lykke.Job.PartnersPayments.Settings.JobSettings
+namespace MAVN.Job.PartnersPayments.Settings.JobSettings
 {
     [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
     public class Constants

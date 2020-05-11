@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using Falcon.Numerics;
+using MAVN.Numerics;
 using MAVN.Service.PartnersPayments.Domain.Enums;
 
 namespace MAVN.Service.PartnersPayments.Domain.Services

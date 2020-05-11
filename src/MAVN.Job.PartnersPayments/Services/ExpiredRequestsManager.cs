@@ -1,13 +1,13 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Autofac;
 using Common;
 using Common.Log;
 using Lykke.Common.Log;
 using MAVN.Service.PartnersPayments.Domain.Services;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace Lykke.Job.PartnersPayments.Services
+namespace MAVN.Job.PartnersPayments.Services
 {
     public class ExpiredRequestsManager : IStartable, IStopable
     {

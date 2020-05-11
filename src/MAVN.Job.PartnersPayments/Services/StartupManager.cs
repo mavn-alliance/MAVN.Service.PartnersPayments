@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Lykke.Common;
 using Lykke.Sdk;
 
-namespace Lykke.Job.PartnersPayments.Services
+namespace MAVN.Job.PartnersPayments.Services
 {
     public class StartupManager : IStartupManager
     {

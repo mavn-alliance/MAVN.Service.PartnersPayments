@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Falcon.Numerics;
+using MAVN.Numerics;
 using MAVN.Service.PartnersPayments.Domain.Enums;
 using MAVN.Service.PartnersPayments.Domain.Models;
 

@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
-using Falcon.Numerics;
+using MAVN.Numerics;
 using Lykke.RabbitMqBroker.Publisher;
-using Lykke.Service.EligibilityEngine.Client;
-using Lykke.Service.EligibilityEngine.Client.Enums;
-using Lykke.Service.EligibilityEngine.Client.Models.ConversionRate.Requests;
-using Lykke.Service.EligibilityEngine.Client.Models.ConversionRate.Responses;
+using MAVN.Service.EligibilityEngine.Client;
+using MAVN.Service.EligibilityEngine.Client.Enums;
+using MAVN.Service.EligibilityEngine.Client.Models.ConversionRate.Requests;
+using MAVN.Service.EligibilityEngine.Client.Models.ConversionRate.Responses;
 using MAVN.Service.PartnersPayments.Contract;
 using MAVN.Service.PartnersPayments.Domain.Common;
 using MAVN.Service.PartnersPayments.Domain.Enums;
@@ -13,10 +13,10 @@ using MAVN.Service.PartnersPayments.Domain.Extensions;
 using MAVN.Service.PartnersPayments.Domain.Models;
 using MAVN.Service.PartnersPayments.Domain.Repositories;
 using MAVN.Service.PartnersPayments.Domain.Services;
-using Lykke.Service.PrivateBlockchainFacade.Client;
-using Lykke.Service.PrivateBlockchainFacade.Client.Models;
-using Lykke.Service.WalletManagement.Client;
-using Lykke.Service.WalletManagement.Client.Enums;
+using MAVN.Service.PrivateBlockchainFacade.Client;
+using MAVN.Service.PrivateBlockchainFacade.Client.Models;
+using MAVN.Service.WalletManagement.Client;
+using MAVN.Service.WalletManagement.Client.Enums;
 
 namespace MAVN.Service.PartnersPayments.DomainServices
 {

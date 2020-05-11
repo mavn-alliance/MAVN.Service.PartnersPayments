@@ -8,7 +8,7 @@ using Lykke.Common;
 using Lykke.Common.Log;
 using Lykke.Sdk;
 
-namespace Lykke.Job.PartnersPayments.Services
+namespace MAVN.Job.PartnersPayments.Services
 {
     public class ShutdownManager : IShutdownManager
     {

@@ -1,9 +1,9 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Common.Log;
 using Lykke.Common.Log;
 using Lykke.RabbitMqBroker.Subscriber;
 using MAVN.Service.PartnersPayments.Domain.RabbitMq.Handlers;
-using Lykke.Service.PrivateBlockchainFacade.Contract.Events;
+using MAVN.Service.PrivateBlockchainFacade.Contract.Events;
 
 namespace MAVN.Service.PartnersPayments.DomainServices.RabbitMq.Subscribers
 {

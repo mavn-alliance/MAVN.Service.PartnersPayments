@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Lykke.Sdk;
 
-namespace Lykke.Job.PartnersPayments
+namespace MAVN.Job.PartnersPayments
 {
     internal sealed class Program
     {

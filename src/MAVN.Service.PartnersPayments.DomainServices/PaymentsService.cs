@@ -1,23 +1,23 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Common.Log;
 using Lykke.Common.Log;
 using Lykke.RabbitMqBroker.Publisher;
-using Lykke.Service.CustomerProfile.Client;
-using Lykke.Service.CustomerProfile.Client.Models.Enums;
-using Lykke.Service.EligibilityEngine.Client;
-using Lykke.Service.EligibilityEngine.Client.Enums;
-using Lykke.Service.EligibilityEngine.Client.Models.ConversionRate.Requests;
-using Lykke.Service.PartnerManagement.Client;
+using MAVN.Service.CustomerProfile.Client;
+using MAVN.Service.CustomerProfile.Client.Models.Enums;
+using MAVN.Service.EligibilityEngine.Client;
+using MAVN.Service.EligibilityEngine.Client.Enums;
+using MAVN.Service.EligibilityEngine.Client.Models.ConversionRate.Requests;
+using MAVN.Service.PartnerManagement.Client;
 using MAVN.Service.PartnersPayments.Contract;
 using MAVN.Service.PartnersPayments.Domain.Enums;
 using MAVN.Service.PartnersPayments.Domain.Models;
 using MAVN.Service.PartnersPayments.Domain.Repositories;
 using MAVN.Service.PartnersPayments.Domain.Services;
 using MAVN.Service.PartnersPayments.DomainServices.Utils;
-using Lykke.Service.WalletManagement.Client;
-using Lykke.Service.WalletManagement.Client.Enums;
+using MAVN.Service.WalletManagement.Client;
+using MAVN.Service.WalletManagement.Client.Enums;
 
 namespace MAVN.Service.PartnersPayments.DomainServices
 {

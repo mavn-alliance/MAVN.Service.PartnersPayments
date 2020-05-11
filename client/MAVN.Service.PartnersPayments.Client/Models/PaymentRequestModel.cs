@@ -1,6 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using Falcon.Numerics;
+using MAVN.Numerics;
 
 namespace MAVN.Service.PartnersPayments.Client.Models
 {
