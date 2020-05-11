@@ -1,6 +1,6 @@
-using Autofac;
+﻿using Autofac;
 using JetBrains.Annotations;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.PartnersPayments.Domain.Repositories;
 using MAVN.Service.PartnersPayments.MsSqlRepositories;
 using MAVN.Service.PartnersPayments.MsSqlRepositories.Repositories;

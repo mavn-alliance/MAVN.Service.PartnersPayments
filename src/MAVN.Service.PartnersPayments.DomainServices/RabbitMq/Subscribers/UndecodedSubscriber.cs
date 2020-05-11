@@ -1,6 +1,6 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Lykke.Common.Log;
-using Lykke.Job.QuorumTransactionWatcher.Contract;
+using MAVN.Job.QuorumTransactionWatcher.Contract;
 using Lykke.RabbitMqBroker.Subscriber;
 using MAVN.Service.PartnersPayments.Domain.RabbitMq.Handlers;
 

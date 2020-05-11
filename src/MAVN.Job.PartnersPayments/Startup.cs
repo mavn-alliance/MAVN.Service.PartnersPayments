@@ -1,11 +1,11 @@
 using System;
 using JetBrains.Annotations;
-using Lykke.Job.PartnersPayments.Settings;
 using Lykke.Sdk;
+using MAVN.Job.PartnersPayments.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Lykke.Job.PartnersPayments
+namespace MAVN.Job.PartnersPayments
 {
     [UsedImplicitly]
     public class Startup

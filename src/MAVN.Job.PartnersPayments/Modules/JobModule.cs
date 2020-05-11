@@ -1,24 +1,24 @@
-using Autofac;
+﻿using Autofac;
 using Common;
 using JetBrains.Annotations;
-using Lykke.Job.PartnersPayments.Services;
-using Lykke.Job.PartnersPayments.Settings;
 using Lykke.Sdk;
 using Lykke.Sdk.Health;
-using Lykke.Service.CustomerProfile.Client;
-using Lykke.Service.PartnerManagement.Client;
+using Lykke.SettingsReader;
+using MAVN.Job.PartnersPayments.Services;
+using MAVN.Job.PartnersPayments.Settings;
+using MAVN.Service.CustomerProfile.Client;
+using MAVN.Service.EligibilityEngine.Client;
+using MAVN.Service.PartnerManagement.Client;
 using MAVN.Service.PartnersPayments.Domain.Common;
 using MAVN.Service.PartnersPayments.Domain.RabbitMq.Handlers;
 using MAVN.Service.PartnersPayments.Domain.Services;
 using MAVN.Service.PartnersPayments.DomainServices;
 using MAVN.Service.PartnersPayments.DomainServices.Common;
 using MAVN.Service.PartnersPayments.DomainServices.RabbitMq.Handlers;
-using Lykke.Service.PrivateBlockchainFacade.Client;
-using Lykke.Service.WalletManagement.Client;
-using Lykke.SettingsReader;
-using Lykke.Service.EligibilityEngine.Client;
+using MAVN.Service.PrivateBlockchainFacade.Client;
+using MAVN.Service.WalletManagement.Client;
 
-namespace Lykke.Job.PartnersPayments.Modules
+namespace MAVN.Job.PartnersPayments.Modules
 {
     [UsedImplicitly]
     public class JobModule : Module

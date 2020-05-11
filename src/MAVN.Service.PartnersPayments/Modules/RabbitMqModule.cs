@@ -1,12 +1,12 @@
-using Autofac;
+﻿using Autofac;
 using JetBrains.Annotations;
-using Lykke.Job.QuorumTransactionWatcher.Contract;
+using MAVN.Job.QuorumTransactionWatcher.Contract;
 using Lykke.RabbitMqBroker.Publisher;
 using Lykke.RabbitMqBroker.Subscriber;
 using MAVN.Service.PartnersPayments.Contract;
 using MAVN.Service.PartnersPayments.DomainServices.RabbitMq.Subscribers;
 using MAVN.Service.PartnersPayments.Settings;
-using Lykke.Service.PrivateBlockchainFacade.Contract.Events;
+using MAVN.Service.PrivateBlockchainFacade.Contract.Events;
 using Lykke.SettingsReader;
 
 namespace MAVN.Service.PartnersPayments.Modules

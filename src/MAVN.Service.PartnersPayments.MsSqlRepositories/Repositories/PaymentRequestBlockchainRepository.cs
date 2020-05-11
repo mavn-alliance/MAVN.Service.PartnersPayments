@@ -1,5 +1,5 @@
-using System.Threading.Tasks;
-using Lykke.Common.MsSql;
+﻿using System.Threading.Tasks;
+using MAVN.Common.MsSql;
 using MAVN.Service.PartnersPayments.Domain.Models;
 using MAVN.Service.PartnersPayments.Domain.Repositories;
 using MAVN.Service.PartnersPayments.MsSqlRepositories.Entities;

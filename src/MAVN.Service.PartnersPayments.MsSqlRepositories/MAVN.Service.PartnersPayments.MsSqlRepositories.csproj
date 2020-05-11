@@ -5,7 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Lykke.AzureStorage" Version="8.13.4" />
-    <PackageReference Include="Lykke.Common.MsSql" Version="2.3.0" />
+    <PackageReference Include="MAVN.Common.MsSql" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
   </ItemGroup>
   <ItemGroup>

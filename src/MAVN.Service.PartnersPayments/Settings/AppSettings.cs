@@ -1,12 +1,11 @@
-using System;
+﻿using System;
 using JetBrains.Annotations;
 using Lykke.Sdk.Settings;
-using Lykke.Service.CurrencyConvertor.Client;
-using Lykke.Service.CustomerProfile.Client;
-using Lykke.Service.EligibilityEngine.Client;
-using Lykke.Service.PartnerManagement.Client;
-using Lykke.Service.PrivateBlockchainFacade.Client;
-using Lykke.Service.WalletManagement.Client;
+using MAVN.Service.CustomerProfile.Client;
+using MAVN.Service.EligibilityEngine.Client;
+using MAVN.Service.PartnerManagement.Client;
+using MAVN.Service.PrivateBlockchainFacade.Client;
+using MAVN.Service.WalletManagement.Client;
 
 namespace MAVN.Service.PartnersPayments.Settings
 {

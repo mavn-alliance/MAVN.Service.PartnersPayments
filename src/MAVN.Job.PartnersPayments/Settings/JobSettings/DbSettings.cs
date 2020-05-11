@@ -1,6 +1,6 @@
 using Lykke.SettingsReader.Attributes;
 
-namespace Lykke.Job.PartnersPayments.Settings.JobSettings
+namespace MAVN.Job.PartnersPayments.Settings.JobSettings
 {
     public class DbSettings
     {

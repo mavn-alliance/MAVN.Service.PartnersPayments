@@ -1,12 +1,12 @@
 using Autofac;
 using JetBrains.Annotations;
-using Lykke.Job.PartnersPayments.Settings;
 using Lykke.RabbitMqBroker.Publisher;
+using Lykke.SettingsReader;
+using MAVN.Job.PartnersPayments.Settings;
+using MAVN.Job.PartnersPayments.Settings.JobSettings;
 using MAVN.Service.PartnersPayments.Contract;
 
-using Lykke.SettingsReader;
-
-namespace Lykke.Job.PartnersPayments.Modules
+namespace MAVN.Job.PartnersPayments.Modules
 {
     [UsedImplicitly]
     public class RabbitMqModule : Module

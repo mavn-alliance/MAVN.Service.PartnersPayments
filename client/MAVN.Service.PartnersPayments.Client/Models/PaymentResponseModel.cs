@@ -1,5 +1,5 @@
 using System;
-using Falcon.Numerics;
+using MAVN.Numerics;
 using MAVN.Service.PartnersPayments.Client.Enums;
 
 namespace MAVN.Service.PartnersPayments.Client.Models
