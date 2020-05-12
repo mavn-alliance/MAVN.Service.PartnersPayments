@@ -1,6 +1,6 @@
-using AutoMapper;
+﻿using AutoMapper;
 using MAVN.Numerics;
-using Lykke.PrivateBlockchain.Definitions;
+using MAVN.PrivateBlockchain.Definitions;
 using MAVN.Service.PartnersPayments.Client.Models;
 using MAVN.Service.PartnersPayments.Domain.Models;
 
