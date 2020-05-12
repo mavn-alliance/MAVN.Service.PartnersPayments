@@ -1,4 +1,4 @@
-using Lykke.PrivateBlockchain.Definitions;
+﻿using MAVN.PrivateBlockchain.Definitions;
 using MAVN.Service.PartnersPayments.Domain.Services;
 using Nethereum.ABI;
 using Nethereum.ABI.FunctionEncoding;
