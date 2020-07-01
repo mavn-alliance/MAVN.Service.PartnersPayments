@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.PartnersPayments.Domain.Models;
 using MAVN.Service.PartnersPayments.Domain.Repositories;
 using MAVN.Service.PartnersPayments.MsSqlRepositories.Entities;
@@ -9,9 +9,9 @@ namespace MAVN.Service.PartnersPayments.MsSqlRepositories.Repositories
 {
     public class PaymentRequestBlockchainRepository : IPaymentRequestBlockchainRepository
     {
-        private readonly MsSqlContextFactory<PartnersPaymentsContext> _contextFactory;
+        private readonly PostgreSQLContextFactory<PartnersPaymentsContext> _contextFactory;
 
-        public PaymentRequestBlockchainRepository(MsSqlContextFactory<PartnersPaymentsContext> contextFactory)
+        public PaymentRequestBlockchainRepository(PostgreSQLContextFactory<PartnersPaymentsContext> contextFactory)
         {
             _contextFactory = contextFactory;
         }
