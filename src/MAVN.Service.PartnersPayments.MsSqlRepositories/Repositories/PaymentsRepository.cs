@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.PartnersPayments.Domain.Enums;
 using MAVN.Service.PartnersPayments.Domain.Models;
 using MAVN.Service.PartnersPayments.Domain.Repositories;
@@ -14,9 +14,9 @@ namespace MAVN.Service.PartnersPayments.MsSqlRepositories.Repositories
 {
     public class PaymentsRepository : IPaymentsRepository
     {
-        private readonly MsSqlContextFactory<PartnersPaymentsContext> _contextFactory;
+        private readonly PostgreSQLContextFactory<PartnersPaymentsContext> _contextFactory;
 
-        public PaymentsRepository(MsSqlContextFactory<PartnersPaymentsContext> contextFactory)
+        public PaymentsRepository(PostgreSQLContextFactory<PartnersPaymentsContext> contextFactory)
         {
             _contextFactory = contextFactory;
         }

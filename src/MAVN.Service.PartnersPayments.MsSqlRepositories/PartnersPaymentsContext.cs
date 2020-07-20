@@ -1,11 +1,11 @@
 ﻿using System.Data.Common;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.PartnersPayments.MsSqlRepositories.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Service.PartnersPayments.MsSqlRepositories
 {
-    public class PartnersPaymentsContext : MsSqlContext
+    public class PartnersPaymentsContext : PostgreSQLContext
     {
         private const string Schema = "partners_payments";
 
@@ -28,7 +28,7 @@ namespace MAVN.Service.PartnersPayments.MsSqlRepositories
         {
         }
 
-        protected override void OnLykkeModelCreating(ModelBuilder modelBuilder)
+        protected override void OnMAVNModelCreating(ModelBuilder modelBuilder)
         {
             var paymentRequestBlockchainEntityBuilder = modelBuilder.Entity<PaymentRequestBlockchainEntity>();
             paymentRequestBlockchainEntityBuilder.HasIndex(x => x.LastOperationId).IsUnique(false);

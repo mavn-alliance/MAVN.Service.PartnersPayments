@@ -1,9 +1,9 @@
 ﻿using Autofac;
 using JetBrains.Annotations;
 using Lykke.SettingsReader;
-using MAVN.Common.MsSql;
 using MAVN.Job.PartnersPayments.Settings;
 using MAVN.Job.PartnersPayments.Settings.JobSettings;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.PartnersPayments.Domain.Repositories;
 using MAVN.Service.PartnersPayments.MsSqlRepositories;
 using MAVN.Service.PartnersPayments.MsSqlRepositories.Repositories;
@@ -22,7 +22,7 @@ namespace MAVN.Job.PartnersPayments.Modules
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterMsSql(
+            builder.RegisterPostgreSQL(
                 _settings.DataConnString,
                 connString => new PartnersPaymentsContext(connString, false),
                 dbConn => new PartnersPaymentsContext(dbConn));

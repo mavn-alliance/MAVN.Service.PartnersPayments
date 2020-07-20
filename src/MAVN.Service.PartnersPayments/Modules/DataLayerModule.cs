@@ -1,11 +1,11 @@
 ﻿using Autofac;
 using JetBrains.Annotations;
-using MAVN.Common.MsSql;
 using MAVN.Service.PartnersPayments.Domain.Repositories;
 using MAVN.Service.PartnersPayments.MsSqlRepositories;
 using MAVN.Service.PartnersPayments.MsSqlRepositories.Repositories;
 using MAVN.Service.PartnersPayments.Settings;
 using Lykke.SettingsReader;
+using MAVN.Persistence.PostgreSQL.Legacy;
 
 namespace MAVN.Service.PartnersPayments.Modules
 {
@@ -21,7 +21,7 @@ namespace MAVN.Service.PartnersPayments.Modules
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterMsSql(
+            builder.RegisterPostgreSQL(
                 _settings.DataConnString,
                 connString => new PartnersPaymentsContext(connString, false),
                 dbConn => new PartnersPaymentsContext(dbConn));
